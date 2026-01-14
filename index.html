@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Presença - Crisma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Lista de Presença - Crisma</h1>
+
+<label>Data do encontro:</label>
+<input type="date" id="data" onchange="carregarData()">
+
+<div class="acoes">
+  <button onclick="limparData()">Limpar data</button>
+  <button onclick="exportar()">Salvar / Enviar</button>
+  <input type="file" id="importar" onchange="importar(event)" hidden>
+  <button onclick="document.getElementById('importar').click()">Importar</button>
+</div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Presente</th>
+            <th>Falta</th>
+            <th>% Presença</th>
+        </tr>
+    </thead>
+    <tbody id="lista"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
